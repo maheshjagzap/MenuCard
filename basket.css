@@ -1,0 +1,108 @@
+/* basket.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fdfcf8;
+}
+
+header {
+  background-color: #2c3e50;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.basket-container {
+  max-width: 700px;
+  margin: 80px auto 2rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.basket-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  align-items: center;
+}
+
+.quantity-controls button {
+  padding: 0.3rem 0.6rem;
+  margin: 0 0.3rem;
+  border: none;
+  background-color: #2c3e50;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Sticky total footer (final correct one) */
+.total-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: white;
+  padding: 0.8rem 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.total-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.total-wrapper button {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Push basket content above footer */
+.basket-content {
+  padding-bottom: 80px; /* Prevents footer from covering content */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .basket-container {
+    margin: 80px 1rem 5rem;
+  }
+
+  .total-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .total-wrapper button {
+    width: 100%;
+  }
+}
